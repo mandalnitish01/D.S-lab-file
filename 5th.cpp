@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Node structure for the linked list
 struct Node {
@@ -23,7 +24,7 @@ public:
         Node* newNode = new Node(value);
         newNode->next = head;
         head = newNode;
-        std::cout << "Inserted " << value << " at the beginning." << std::endl;
+        cout << "Inserted " << value << " at the beginning." << endl;
     }
 
     // Function to insert a new node at the end of the list
@@ -43,7 +44,7 @@ public:
             current->next = newNode;
         }
 
-        std::cout << "Inserted " << value << " at the end." << std::endl;
+    cout << "Inserted " << value << " at the end." << endl;
     }
 
     // Function to delete a node with a specific value from the list
@@ -68,9 +69,9 @@ public:
             }
             
             delete current; // Free the memory occupied by the deleted node
-            std::cout << "Deleted node with value " << value << "." << std::endl;
+            cout << "Deleted node with value " << value << "." << endl;
         } else {
-            std::cout << "Node with value " << value << " not found." << std::endl;
+            cout << "Node with value " << value << " not found." << endl;
         }
     }
 
@@ -78,10 +79,10 @@ public:
     void display() {
         Node* current = head;
         while (current != nullptr) {
-            std::cout << current->data << " ";
+            cout << current->data << " ";
             current = current->next;
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 };
 
